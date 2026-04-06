@@ -41,10 +41,7 @@ function PageLoader() {
 }
 
 function getPath() {
-  const hash = window.location.hash;
-  if (!hash || hash === "#" || hash === "#/") return "/";
-  const p = hash.startsWith("#") ? hash.slice(1) : hash;
-  return p || "/";
+  return window.location.pathname || "/";
 }
 
 function renderPage(path) {
@@ -77,16 +74,18 @@ export default function App() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleHashChange = () => {
+    const handlePopState = () => {
       setPath(getPath());
       window.scrollTo(0, 0);
     };
-    window.addEventListener("hashchange", handleHashChange);
-    return () => window.removeEventListener("hashchange", handleHashChange);
+    window.addEventListener("popstate", handlePopState);
+    return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
   const navigate = (newPath) => {
-    window.location.hash = newPath;
+    window.history.pushState(null, "", newPath);
+    setPath(newPath);
+    window.scrollTo(0, 0);
   };
 
   const handlePreloaderComplete = useCallback(() => {
