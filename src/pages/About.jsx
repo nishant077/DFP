@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import AnimatedSection from "../components/AnimatedSection";
 import OrangeTicker from "../components/OrangeTicker";
 import PullQuote from "../components/PullQuote";
+import aboutimage from '../assets/aboutpage.jpeg';
 
 const intentions = [
     {
@@ -58,10 +59,16 @@ export default function About() {
         <div>
             {/* Hero */}
             <section
-                className="noise-overlay bg-[var(--navy)] min-h-[60vh] flex items-center justify-center px-6 md:px-12 py-16 md:py-20 text-center"
+                className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 md:py-20 text-center overflow-hidden bg-(--navy)"
                 data-ocid="about.section"
             >
-                <div className="w-full flex flex-col items-center" style={{ maxWidth: 960 }}>
+                <img
+                    src={aboutimage}
+                    alt="Research and advocacy"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
+                <div className="noise-overlay absolute inset-0" />
+                <div className="relative z-3 w-full flex flex-col items-center" style={{ maxWidth: 960 }}>
                     <div className="t-label mb-3 text-center">
                         ABOUT THE DEMOCRATIC FUTURES PROJECT
                     </div>
@@ -97,7 +104,7 @@ export default function About() {
             {/* Our Story */}
             <section className="bg-white py-16 md:py-24">
                 <div
-                    className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col md:grid md:grid-cols-[35%_minmax(0,1fr)] gap-12 md:gap-[64px]"
+                    className="max-w-[1280px] mx-auto px-6 flex flex-col md:grid md:grid-cols-[35%_minmax(0,1fr)] gap-12 md:gap-[64px]"
                 >
                     {/* Left sticky sidebar */}
                     <div className="md:sticky md:top-[100px] self-start">
@@ -211,7 +218,7 @@ export default function About() {
                 }}
             >
                 <div
-                    className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-[64px] items-start"
+                    className="max-w-[1280px] mx-auto px-6 flex flex-col md:grid md:grid-cols-2 gap-12 md:gap-[64px] items-start"
                 >
                     <AnimatedSection>
                         <PullQuote style={{ color: "#fff" }}>
@@ -264,7 +271,7 @@ export default function About() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: 0.1 }}
-                        className="px-6 md:px-12 py-12 md:py-16 border-b border-[rgba(35,45,75,0.08)] max-w-[1280px] mx-auto flex flex-col md:grid md:grid-cols-[120px_2px_1fr] gap-6 md:gap-10 items-start md:items-center"
+                        className="px-6 py-12 md:py-16 border-b border-[rgba(35,45,75,0.08)] max-w-[1280px] mx-auto flex flex-col md:grid md:grid-cols-[120px_2px_1fr] gap-6 md:gap-10 items-start md:items-center"
                         style={{
                             background: i % 2 === 0 ? "var(--cream)" : "#fff",
                         }}
@@ -302,7 +309,7 @@ export default function About() {
             </section>
 
             {/* Values */}
-            <section className="bg-[var(--cream)] px-6 md:px-12 py-16 md:py-24">
+            <section className="bg-[var(--cream)] px-6 py-16 md:py-24">
                 <div className="max-w-[1280px] mx-auto">
                     {/* <AnimatedSection style={{ textAlign: "center", marginBottom: 48 }}>
                         <div className="t-label mb-3">OUR VALUES</div>
@@ -348,7 +355,7 @@ export default function About() {
             </section>
 
             {/* Funded By */}
-            <section className="bg-[var(--cream)] px-6 md:px-12 py-12 md:py-16 text-center">
+            <section className="bg-[var(--cream)] px-6 py-12 md:py-16 text-center">
                 <div className="max-w-[700px] mx-auto">
                     <div className="t-label mb-4">MADE POSSIBLE BY</div>
                     <div className="flex flex-wrap gap-8 justify-center">

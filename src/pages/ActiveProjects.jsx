@@ -3,6 +3,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import OrangeTicker from "../components/OrangeTicker";
 import ProjectAccordion from "../components/ProjectAccordion";
 import { activeProjects } from "../data/activeProjects";
+import activeimage from '../assets/activeproject.jpeg';
 
 export default function ActiveProjects() {
     return (
@@ -13,12 +14,12 @@ export default function ActiveProjects() {
                 data-ocid="research.section"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1569234934979-74f8f8e91a1c?w=1400&q=80"
+                    src={activeimage}
                     alt="Research and advocacy"
-                    className="absolute inset-0 w-full h-full object-cover opacity-40"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
                 />
                 <div className="noise-overlay absolute inset-0" />
-                <div className="relative z-3 py-16 md:py-20 w-full flex flex-col items-center px-6 md:px-12 max-w-[1280px]">
+                <div className="relative z-3 py-16 md:py-20 w-full flex flex-col items-center px-6 max-w-[1280px]">
                     <div className="t-label mb-3 text-center">OUR RESEARCH</div>
                     <OrangeTicker />
                     <motion.h1
@@ -40,7 +41,7 @@ export default function ActiveProjects() {
 
             {/* Accordion */}
             <section className="bg-white py-12 md:py-16">
-                <div className="max-w-[1280px] mx-auto px-6 md:px-12">
+                <div className="max-w-[1280px] mx-auto px-6">
                     <AnimatedSection style={{ marginBottom: 40 }}>
                         <div className="flex items-center justify-between flex-wrap gap-4">
                             <div>

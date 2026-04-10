@@ -2,16 +2,23 @@ import { motion } from "motion/react";
 import AnimatedSection from "../components/AnimatedSection";
 import OrangeTicker from "../components/OrangeTicker";
 import { books } from "../data/publications";
+import publicationimgae from '../assets/publicationpage.png';
 
 export default function Publications() {
     return (
         <div>
             {/* Hero */}
             <section
-                className="noise-overlay bg-[var(--navy)] px-6 md:px-12 py-16 md:py-24 text-center"
+                className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 md:py-24 text-center overflow-hidden bg-(--navy)"
                 data-ocid="publications.section"
             >
-                <div className="max-w-[960px] mx-auto">
+                <img
+                    src={publicationimgae}
+                    alt="Publications"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
+                <div className="noise-overlay absolute inset-0" />
+                <div className="relative z-3 w-full flex flex-col items-center" style={{ maxWidth: 960 }}>
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
@@ -36,7 +43,7 @@ export default function Publications() {
 
             {/* Books */}
             <section className="bg-[var(--cream)] py-16 md:py-24">
-                <div className="max-w-[1280px] mx-auto px-6 md:px-12">
+                <div className="max-w-[1280px] mx-auto px-6">
                     <AnimatedSection style={{ marginBottom: 48 }}>
                         <div className="t-label mb-3">COMMUNITY PUBLICATIONS</div>
                         <OrangeTicker />
@@ -119,7 +126,7 @@ export default function Publications() {
 
             {/* Transformations Journal */}
             <section className="bg-white py-16 md:py-24">
-                <div className="max-w-[1280px] mx-auto px-8 md:px-12 flex flex-col md:flex-row gap-12 md:gap-20 items-center">
+                <div className="max-w-[1280px] mx-auto px-6 flex flex-col md:flex-row gap-12 md:gap-20 items-center">
                     <div className="w-full md:w-3/5">
                         <AnimatedSection>
                             <div className="border-l-4 border-[var(--orange)] pl-8">
@@ -172,7 +179,7 @@ export default function Publications() {
 
                     <div className="w-full md:w-2/5 mt-4 md:mt-0">
                         <AnimatedSection delay={0.2}>
-                            <div className="bg-(--navy) px-6 md:px-10 py-12 text-center shadow-lg">
+                            <div className="bg-(--navy) px-6 py-12 text-center shadow-lg">
                                 <div
                                     className="font-black text-white uppercase leading-none mb-4"
                                     style={{
@@ -202,7 +209,7 @@ export default function Publications() {
                 </div>
 
                 {/* Issues placeholder */}
-                <div id="journal-issues" className="max-w-[1280px] mt-12 mx-auto px-8 md:px-12">
+                <div id="journal-issues" className="max-w-[1280px] mt-12 mx-auto px-6">
                     <div className="border-t border-[rgba(35,45,75,0.15)] pt-10">
                         <div className="t-label mb-4">CURRENT ISSUES</div>
                         <div
@@ -224,7 +231,7 @@ export default function Publications() {
             <section className="flex flex-col md:flex-row min-h-[480px]">
                 {/* Left */}
                 <div
-                    className="noise-overlay bg-[var(--navy)] px-8 md:px-14 py-16 flex flex-col justify-center w-full md:w-3/5"
+                    className="noise-overlay bg-[var(--navy)] px-6 py-16 flex flex-col justify-center w-full md:w-3/5"
                 >
                     <div className="t-label mb-3">PODCAST</div>
                     <OrangeTicker />
@@ -278,7 +285,7 @@ export default function Publications() {
 
                 {/* Right */}
                 <div
-                    className="bg-[var(--cream)] px-8 md:px-12 py-16 flex flex-col items-center justify-center gap-8 w-full md:w-2/5"
+                    className="bg-[var(--cream)] px-6 py-16 flex flex-col items-center justify-center gap-8 w-full md:w-2/5"
                 >
                     <div className="w-[180px] h-[180px] md:w-[220px] md:h-[220px] rounded-full bg-[var(--navy)] flex flex-col items-center justify-center p-6 shrink-0">
                         <div

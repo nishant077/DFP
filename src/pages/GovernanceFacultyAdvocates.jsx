@@ -4,6 +4,8 @@ import OrangeTicker from "../components/OrangeTicker";
 import { facultyAllies, governance } from "../data/governancefacultyallies";
 import AnimatedSection from "../components/AnimatedSection";
 import PersonCard from "../components/PersonCard";
+import governancepage from '../assets/governance.jpeg';
+
 
 const filterOptions = [
     { value: "all", label: "All" },
@@ -30,12 +32,12 @@ export default function GovernanceFacultyAdvocates() {
                 data-ocid="research.section"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1569234934979-74f8f8e91a1c?w=1400&q=80"
+                    src={governancepage}
                     alt="Research and advocacy"
-                    className="absolute inset-0 w-full h-full object-cover opacity-40"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
                 />
                 <div className="noise-overlay absolute inset-0" />
-                <div className="relative z-3 py-16 md:py-20 w-full flex flex-col items-center px-6 md:px-12 max-w-[1280px] mx-auto">
+                <div className="relative z-3 py-16 md:py-20 w-full flex flex-col items-center px-6 max-w-[1280px] mx-auto">
                     <div className="t-label mb-3 text-center">OUR LEADERSHIP</div>
                     <OrangeTicker />
                     <motion.h1
@@ -58,7 +60,7 @@ export default function GovernanceFacultyAdvocates() {
                 </div>
             </section>
 
-            <section className="bg-[var(--cream)] px-12 py-16">
+            <section className="bg-[var(--cream)] px-6 py-16">
                 <div className="max-w-[1280px] mx-auto">
                     <div className="flex items-center justify-between flex-wrap gap-6 mb-12">
                         <div>

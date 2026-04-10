@@ -4,6 +4,7 @@ import { useState } from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import PullQuote from "../components/PullQuote";
 import OrangeTicker from "../components/OrangeTicker";
+import contactimage from '../assets/contact.jpeg';
 
 export default function Contact() {
     const [form, setForm] = useState({
@@ -31,10 +32,16 @@ export default function Contact() {
         <div>
             {/* Hero */}
             <section
-                className="noise-overlay bg-(--navy) min-h-[40vh] flex items-center justify-center px-6 md:px-12 py-16 md:py-20 text-center"
+                className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 md:py-20 text-center overflow-hidden bg-(--navy)"
                 data-ocid="contact.section"
             >
-                <div className="w-full flex flex-col items-center" style={{ maxWidth: 960 }}>
+                <img
+                    src={contactimage}
+                    alt="Contact"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
+                <div className="noise-overlay absolute inset-0" />
+                <div className="relative z-3 w-full flex flex-col items-center" style={{ maxWidth: 960 }}>
                     <div className="t-label mb-3 text-center">REACH OUT</div>
                     <OrangeTicker />
                     <motion.h1
@@ -56,7 +63,7 @@ export default function Contact() {
             {/* Two-column layout */}
             <section className="bg-(--cream) py-16 md:py-24">
                 <div
-                    className="max-w-[1280px] mx-auto px-6 md:px-12 flex flex-col md:grid md:grid-cols-[40%_minmax(0,1fr)] gap-12 md:gap-[80px] items-start"
+                    className="max-w-[1280px] mx-auto px-6 flex flex-col md:grid md:grid-cols-[40%_minmax(0,1fr)] gap-12 md:gap-[80px] items-start"
                 >
                     {/* Left */}
                     <AnimatedSection>

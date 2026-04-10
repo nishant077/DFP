@@ -1,4 +1,4 @@
-
+import steveparks from '../assets/governanceImages/steveparks.png';
 
 export const facultyAllies = [
     {
@@ -302,13 +302,13 @@ export const governance = [
     {
         id: "stephen-parks",
         name: "Stephen Parks",
-        image: "/images/people/stephen-parks.jpg",
+        image: steveparks,
         initials: "SP",
         role: "Founder & Director",
         affiliation: "Writing and Rhetoric Program, University of Virginia",
         email: "sjp3st@virginia.edu",
         category: "governance",
-        bio: "Stephen Parks is the Founder and Director of the Democratic Futures Project. He is a Professor in the Writing and Rhetoric Program at the University of Virginia, where his scholarship focuses on the intersection of literacy, community organizing, and democratic participation. Parks has spent over two decades building international alliances between academic institutions and grassroots democratic movements, developing research frameworks that center advocates as co-producers of knowledge. His work with the DFP has connected scholars and activists across more than 50 nations, producing collaborative publications, training programs, and policy interventions that support democratic resilience worldwide.",
+        bio: "Stephen Parks is a professor in the Writing and Rhetoric Program at the University of Virginia’s Department of English. He is founder of the Democratic Futures Project and co-founder of Syrians for Truth and Justice, a human rights documentation project. Over the past twenty-five years, he has worked with faculty, advocates, and students in Europe, North Africa, North America, the Middle East, Oceania, and Southeast Asia on expanding democratic rights. He is the author of three monographs and over 25 peer reviewed articles. He has also served as an editor for academic journals, community presses, and scholarly monograph series. He is the recipient of the Distinguished Engaged Scholar Award as well as the Jefferson Scholars Excellence in Teaching Award.",
     },
     {
         id: "srdja-popovic",

@@ -88,6 +88,7 @@ export const currentFellows = [
     },
 ];
 
+
 export const alumFellows = [
     { name: "Haley Elszasz", field: "Politics" },
     { name: "Grace Gent", field: "English / Foreign Affairs" },

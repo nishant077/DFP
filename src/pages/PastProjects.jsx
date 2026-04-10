@@ -6,7 +6,7 @@ export default function PastProjects() {
         <div>
             {/* Hero */}
             <section
-                className="bg-(--cream) px-12 py-24 flex flex-col items-center justify-center text-center"
+                className="bg-(--cream) px-6 py-24 flex flex-col items-center justify-center text-center"
                 data-ocid="past-projects.section"
             >
                 <motion.h1
@@ -39,7 +39,7 @@ export default function PastProjects() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: i * 0.1 }}
-                        className="w-full flex justify-center py-20 px-8 md:px-12"
+                        className="w-full flex justify-center py-20 px-6"
                         style={{
                             background: i % 2 !== 0 ? "var(--cream)" : "#ffffff",
                         }}

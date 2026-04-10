@@ -6,6 +6,7 @@ import PullQuote from "../components/PullQuote";
 import StatCounter from "../components/StatCounter";
 import { useRouter } from "../context/router";
 import MarqueeTicker from "../components/MarqueeTicker";
+import heroimage from '../assets/dfpheroimage.png';
 
 const heroWords = [
     "RESEARCH",
@@ -167,7 +168,7 @@ export default function Home() {
                     className="relative overflow-hidden flex items-stretch w-full h-[40vh] md:h-auto md:w-[45%]"
                 >
                     <img
-                        src="https://images.unsplash.com/photo-1591112862491-09ba0ba3a8a6?w=1200&q=80"
+                        src={heroimage}
                         alt="Democratic activists gathering"
                         style={{
                             width: "100%",
