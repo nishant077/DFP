@@ -2,6 +2,7 @@ import { motion } from "motion/react";
 import AnimatedSection from "../components/AnimatedSection";
 import OrangeTicker from "../components/OrangeTicker";
 import PersonCard from "../components/PersonCard";
+import partnersheroimage from '../assets/Partnershero.png';
 
 const partners = [
     {
@@ -103,13 +104,13 @@ export default function Partners() {
                 data-ocid="research.section"
             >
                 <img
-                    src="https://images.unsplash.com/photo-1569234934979-74f8f8e91a1c?w=1400&q=80"
+                    src={partnersheroimage}
                     alt="Research and advocacy"
-                    className="absolute inset-0 w-full h-full object-cover opacity-40"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
                 />
                 <div className="noise-overlay absolute inset-0" />
                 <div className="relative z-3 py-16 md:py-20 w-full flex flex-col items-center px-6 md:px-12 max-w-[1280px] mx-auto">
-                    <div className="t-label mb-3 text-center">PEOPLE · PARTNERS</div>
+                    <div className="t-label mb-3 text-center">Together with Our Partners</div>
                     <OrangeTicker />
                     <motion.h1
                         initial={{ opacity: 0, y: 30 }}

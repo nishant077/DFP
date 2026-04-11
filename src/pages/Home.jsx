@@ -60,10 +60,11 @@ export default function Home() {
                 <div
                     className="noise-overlay bg-(--navy) flex flex-col justify-center px-6 md:px-[48px] lg:px-[64px] py-[64px] md:py-[80px] w-full md:w-[55%]"
                 >
-                    <OrangeTicker />
+
                     <div className="t-label" style={{ marginBottom: 24 }}>
                         EST. 2019 · UNIVERSITY OF VIRGINIA
                     </div>
+                    <OrangeTicker />
                     <h1 style={{ margin: 0, marginBottom: 24 }}>
                         {heroWords.map((word, i) => (
                             <motion.span

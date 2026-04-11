@@ -3,6 +3,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import OrangeTicker from "../components/OrangeTicker";
 import PullQuote from "../components/PullQuote";
 import aboutimage from '../assets/aboutpage.jpeg';
+import aboutimg2 from '../assets/dfpheroimage.png';
 
 const intentions = [
     {
@@ -45,14 +46,14 @@ const values = [
     },
 ];
 
-const timeline = [
-    { year: "2019", label: "Founded" },
-    { year: "2021", label: "STJ Partnership" },
-    { year: "2022", label: "Philippines" },
-    { year: "2023", label: "GENE / AI" },
-    { year: "2024", label: "Crypto WG" },
-    { year: "2025", label: "CAKN" },
-];
+// const timeline = [
+//     { year: "2019", label: "Founded" },
+//     { year: "2021", label: "STJ Partnership" },
+//     { year: "2022", label: "Philippines" },
+//     { year: "2023", label: "GENE / AI" },
+//     { year: "2024", label: "Crypto WG" },
+//     { year: "2025", label: "CAKN" },
+// ];
 
 export default function About() {
     return (
@@ -109,51 +110,8 @@ export default function About() {
                     {/* Left sticky sidebar */}
                     <div className="md:sticky md:top-[100px] self-start">
                         <div className="relative">
-                            <span
-                                className="ghost-text text-[var(--navy)] absolute left-[-20px] top-0"
-                                style={{ fontSize: "clamp(100px, 15vw, 180px)" }}
-                                aria-hidden="true"
-                            >
-                                01
-                            </span>
-                            <div className="relative">
-                                <div className="t-label mb-3">OUR STORY</div>
-                                <div className="border-l-4 border-[var(--orange)] pl-6 mb-8" />
-                                <div className="flex flex-col gap-0">
-                                    {timeline.map((item, i) => (
-                                        <div
-                                            key={item.year}
-                                            className="flex items-center gap-3 pb-4"
-                                        >
-                                            <div className="flex flex-col items-center">
-                                                <div className="w-[10px] h-[10px] rounded-full bg-[var(--orange)]" />
-                                                {i < timeline.length - 1 && (
-                                                    <div
-                                                        className="w-[2px] h-6"
-                                                        style={{ background: "rgba(35,45,75,0.2)" }}
-                                                    />
-                                                )}
-                                            </div>
-                                            <div>
-                                                <span
-                                                    className="font-bold text-[var(--orange)] text-[15px]"
-                                                    style={{
-                                                        fontFamily: "'Barlow Condensed', sans-serif",
-                                                    }}
-                                                >
-                                                    {item.year}
-                                                </span>
-                                                <span
-                                                    className="text-[var(--fog)] ml-2 text-[13px]"
-                                                    style={{ fontFamily: "Lora, serif" }}
-                                                >
-                                                    {item.label}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+
+                            <img src={aboutimg2} alt="aboutimg" className="w-full h-full" />
                         </div>
                     </div>
 

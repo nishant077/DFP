@@ -20,21 +20,21 @@ export default function Footer() {
             style={{
                 background: "var(--navy)",
                 borderTop: "4px solid var(--orange)",
-                borderBottom: "4px solid var(--orange)",
+                // borderBottom: "4px solid var(--orange)",
                 position: "relative",
                 overflow: "hidden",
             }}
         >
             {/* Ghost text */}
             <div
-                className="ghost-text"
+                className="ghost-text flex items-center justify-center"
                 style={{
                     fontSize: "clamp(80px, 20vw, 240px)",
                     color: "#fff",
                     position: "absolute",
-                    bottom: -20,
+                    top: "50%",
                     left: "50%",
-                    transform: "translateX(-50%)",
+                    transform: "translate(-50%, -50%)",
                     whiteSpace: "nowrap",
                     opacity: 0.04,
                 }}
@@ -176,23 +176,7 @@ export default function Footer() {
                             Funded By
                         </div>
                         <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-                            <a
-                                href="https://karshinstitute.virginia.edu/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    color: "rgba(255,255,255,0.75)",
-                                    fontFamily: "'Barlow Condensed', sans-serif",
-                                    fontWeight: 700,
-                                    fontSize: 16,
-                                    textDecoration: "none",
-                                    borderBottom: "1px solid var(--orange)",
-                                    display: "inline-block",
-                                    paddingBottom: 2,
-                                }}
-                            >
-                                Karsh Institute
-                            </a>
+
                             <a
                                 href="https://cgii.virginia.edu/"
                                 target="_blank"
@@ -208,7 +192,7 @@ export default function Footer() {
                                     paddingBottom: 2,
                                 }}
                             >
-                                CGII, UVA
+                                Center for Global Inquiry and Innovation
                             </a>
                         </div>
                     </div>
@@ -234,20 +218,10 @@ export default function Footer() {
                             margin: 0,
                         }}
                     >
-                        © {year} Democratic Futures Project. University of Virginia.
+                        © {year} Democratic Futures Project.
+                        All rights reserved.
                     </p>
-                    <a
-                        href={`https://caffeine.ai?utm_source=caffeine-footer&utm_medium=referral&utm_content=${encodeURIComponent(hostname)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        style={{
-                            fontFamily: "Lora, serif",
-                            fontSize: 13,
-                            color: "rgba(255,255,255,0.4)",
-                        }}
-                    >
-                        Built with ♥ using caffeine.ai
-                    </a>
+
                 </div>
             </div>
         </footer>
