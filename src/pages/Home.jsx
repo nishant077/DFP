@@ -7,12 +7,13 @@ import StatCounter from "../components/StatCounter";
 import { useRouter } from "../context/router";
 import MarqueeTicker from "../components/MarqueeTicker";
 import heroimage from '../assets/dfpheroimage.png';
+import steve from '../assets/governanceImages/steveparks.png'
+import Srdja from '../assets/governanceImages/Srdja.png'
 
 const heroWords = [
     "RESEARCH",
     "IN SERVICE OF",
-    "DEMOCRATIC",
-    "STRUGGLE.",
+    "DEMOCRATIC STRUGGLE.",
 ];
 
 const beliefs = [
@@ -53,18 +54,21 @@ export default function Home() {
         <div>
             {/* 1A: Hero */}
             <section
-                className="min-h-screen flex flex-col md:flex-row"
+                className="relative min-h-screen flex items-center justify-center px-6 py-16 md:py-20 text-center overflow-hidden bg-(--navy)"
                 data-ocid="home.section"
             >
-                {/* Left panel */}
-                <div
-                    className="noise-overlay bg-(--navy) flex flex-col justify-center px-6 md:px-[48px] lg:px-[64px] py-[64px] md:py-[80px] w-full md:w-[55%]"
-                >
+                <img
+                    src={heroimage}
+                    alt="Democratic activists gathering"
+                    className="absolute inset-0 w-full h-full object-cover opacity-20"
+                />
+                <div className="noise-overlay absolute inset-0" />
 
-                    <div className="t-label" style={{ marginBottom: 24 }}>
-                        EST. 2019 · UNIVERSITY OF VIRGINIA
+                <div className="relative z-3 w-full flex flex-col items-center" style={{ maxWidth: 960 }}>
+                    <div className="t-label flex flex-col items-center">
+                        <div className="mb-3 text-white">EST. 2019 · UNIVERSITY OF VIRGINIA</div>
+                        <OrangeTicker />
                     </div>
-                    <OrangeTicker />
                     <h1 style={{ margin: 0, marginBottom: 24 }}>
                         {heroWords.map((word, i) => (
                             <motion.span
@@ -76,7 +80,7 @@ export default function Home() {
                                     display: "block",
                                     fontFamily: "'Barlow Condensed', sans-serif",
                                     fontWeight: 900,
-                                    fontSize: "clamp(56px, 8vw, 120px)",
+                                    fontSize: "clamp(48px,7vw,110px)",
                                     lineHeight: 0.92,
                                     textTransform: "uppercase",
                                     letterSpacing: "-1px",
@@ -106,16 +110,15 @@ export default function Home() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 1.5, duration: 0.5 }}
-                        style={{ display: "flex", gap: 16, flexWrap: "wrap" }}
+                        style={{ display: "flex", gap: 16, flexWrap: "wrap", justifyContent: "center" }}
                     >
                         <button
                             type="button"
                             onClick={() => navigate("/research/active-projects")}
                             data-ocid="home.primary_button"
+                            className="hover:bg-(--navy) hover:border hover:border-white bg-(--orange) "
                             style={{
-                                background: "var(--orange)",
                                 color: "#fff",
-                                border: "none",
                                 padding: "14px 28px",
                                 fontFamily: "'Barlow Condensed', sans-serif",
                                 fontWeight: 700,
@@ -129,14 +132,10 @@ export default function Home() {
                             onMouseEnter={(e) => {
                                 (e.currentTarget).style.filter =
                                     "brightness(1.1)";
-                                (e.currentTarget).style.transform =
-                                    "scale(1.03)";
                             }}
                             onMouseLeave={(e) => {
                                 (e.currentTarget).style.filter =
                                     "brightness(1)";
-                                (e.currentTarget).style.transform =
-                                    "scale(1)";
                             }}
                         >
                             OUR WORK →
@@ -145,10 +144,9 @@ export default function Home() {
                             type="button"
                             onClick={() => navigate("/about")}
                             data-ocid="home.secondary_button"
+                            className="hover:bg-(--orange) bg-transparent border border-white hover:border-0"
                             style={{
-                                background: "transparent",
                                 color: "#fff",
-                                border: "1px solid #fff",
                                 padding: "14px 28px",
                                 fontFamily: "'Barlow Condensed', sans-serif",
                                 fontWeight: 700,
@@ -163,47 +161,6 @@ export default function Home() {
                         </button>
                     </motion.div>
                 </div>
-
-                {/* Right panel: image */}
-                <div
-                    className="relative overflow-hidden flex items-stretch w-full h-[40vh] md:h-auto md:w-[45%]"
-                >
-                    <img
-                        src={heroimage}
-                        alt="Democratic activists gathering"
-                        style={{
-                            width: "100%",
-                            height: "100%",
-                            objectFit: "cover",
-                            display: "block",
-                        }}
-                    />
-                    <div
-                        style={{
-                            position: "absolute",
-                            inset: 0,
-                            background:
-                                "linear-gradient(to right, var(--navy) 0%, transparent 30%)",
-                        }}
-                    />
-                    <div
-                        style={{
-                            position: "absolute",
-                            right: 16,
-                            top: "50%",
-                            transform: "translateY(-50%) rotate(90deg)",
-                            fontFamily: "Lora, serif",
-                            fontSize: 11,
-                            color: "var(--cream)",
-                            letterSpacing: "3px",
-                            opacity: 0.7,
-                            whiteSpace: "nowrap",
-                        }}
-                    >
-                        DFP · 2026
-                    </div>
-                </div>
-
             </section>
 
             {/* 1B: Marquee Ticker */}
@@ -217,7 +174,7 @@ export default function Home() {
                     {/* Left */}
                     <AnimatedSection style={{ position: "relative" }}>
                         <div style={{ position: "relative" }}>
-                            <span
+                            {/* <span
                                 className="ghost-text"
                                 style={{
                                     fontSize: "clamp(120px, 18vw, 220px)",
@@ -229,7 +186,7 @@ export default function Home() {
                                 aria-hidden="true"
                             >
                                 01
-                            </span>
+                            </span> */}
                             <div style={{ position: "relative" }}>
                                 <div className="t-label" style={{ marginBottom: 12 }}>
                                     OUR TRUTHS
@@ -251,10 +208,11 @@ export default function Home() {
                                         type="button"
                                         onClick={() => navigate("/about")}
                                         data-ocid="home.secondary_button"
+                                        className="bg-transparent border-2 border-(--navy) text-(--navy) hover:bg-(--orange) hover:text-white hover:border-0"
                                         style={{
-                                            background: "transparent",
-                                            border: "2px solid var(--navy)",
-                                            color: "var(--navy)",
+                                            // background: "transparent",
+                                            // border: "2px solid var(--navy)",
+                                            // color: "var(--navy)",
                                             padding: "10px 20px",
                                             fontFamily: "'Barlow Condensed', sans-serif",
                                             fontWeight: 700,
@@ -271,10 +229,11 @@ export default function Home() {
                                         type="button"
                                         onClick={() => navigate("/research/active-projects")}
                                         data-ocid="home.secondary_button"
+                                        className="bg-transparent border-2 border-(--navy) text-(--navy) hover:bg-(--orange) hover:text-white hover:border-0"
                                         style={{
-                                            background: "transparent",
-                                            border: "2px solid var(--navy)",
-                                            color: "var(--navy)",
+                                            // background: "transparent",
+                                            // border: "2px solid var(--navy)",
+                                            // color: "var(--navy)",
                                             padding: "10px 20px",
                                             fontFamily: "'Barlow Condensed', sans-serif",
                                             fontWeight: 700,
@@ -311,7 +270,7 @@ export default function Home() {
                                     cursor: "default",
                                     transition: "background 0.2s",
                                     borderRadius: 2,
-                                    paddingLeft: 8,
+                                    paddingLeft: 15,
                                 }}
                             >
                                 <span
@@ -361,7 +320,7 @@ export default function Home() {
                             className="t-section"
                             style={{ color: "#fff", marginBottom: 56, maxWidth: 900 }}
                         >
-                            WE REFRAME. WE CONNECT. WE INSPIRE. WE MOBILIZE.
+                            WE REFRAME. WE CONNECT.<br /> WE INSPIRE. WE MOBILIZE.
                         </h2>
                     </AnimatedSection>
 
@@ -375,12 +334,14 @@ export default function Home() {
                                 transition={{ duration: 0.5, delay: i * 0.15 }}
                             >
                                 <motion.div
-                                    whileHover={{ "--num-color": "var(--orange)" }}
+                                    whileHover={{ backgroundColor: "var(--orange-glow)" }}
                                     style={{
                                         borderTop: "1px solid rgba(244,244,240,0.2)",
-                                        padding: "32px 0",
+                                        padding: "32px 24px",
+                                        borderRadius: "4px",
+                                        transition: "background-color 0.2s ease"
                                     }}
-                                    className="value-row grid grid-cols-1 md:grid-cols-[100px_250px_1fr] gap-4 md:gap-8 items-center"
+                                    className="value-row  grid grid-cols-1 md:grid-cols-[100px_250px_1fr] gap-4 md:gap-8 items-center"
                                 >
                                     <span
                                         style={{
@@ -444,8 +405,8 @@ export default function Home() {
                         className="flex flex-col md:grid md:grid-cols-3 gap-12 md:gap-0 mb-12"
                     >
                         {[
-                            { target: 50, suffix: "+", label: "NATIONS" },
-                            { target: 25, suffix: "+", label: "YEARS" },
+                            { target: 22, suffix: "", label: "NATIONS" },
+                            { target: 6, suffix: "", label: "YEARS" },
                             { target: 6, suffix: "", label: "CONTINENTS" },
                         ].map((stat, i) => (
                             <div
@@ -487,9 +448,9 @@ export default function Home() {
                     </AnimatedSection>
 
                     <div
-                        className="flex flex-col md:grid gap-4 min-h-[500px]"
+                        className="flex flex-col md:grid gap-4 min-h-125"
                         style={{
-                            gridTemplateColumns: "1fr 320px",
+                            gridTemplateColumns: "1fr 400px",
                             gridTemplateRows: "1fr 1fr",
                         }}
                     >
@@ -497,7 +458,7 @@ export default function Home() {
                         <motion.div
                             whileHover={{ filter: "brightness(1.1)" }}
                             transition={{ duration: 0.3 }}
-                            className="relative overflow-hidden rounded-sm cursor-pointer md:row-span-2 min-h-[400px] md:min-h-0"
+                            className="relative overflow-hidden rounded-sm cursor-pointer md:row-span-2 min-h-100 md:min-h-0"
                             onClick={() => navigate("/research/active-projects")}
                         >
                             <img
@@ -566,8 +527,9 @@ export default function Home() {
                                     rights reporters documenting abuses across Syria.
                                 </p>
                                 <span
+                                    className="text-(--orange) hover:text-white"
                                     style={{
-                                        color: "var(--orange)",
+                                        // color: "var(--orange)",
                                         fontFamily: "'Barlow Condensed', sans-serif",
                                         fontWeight: 700,
                                         fontSize: 14,
@@ -664,11 +626,12 @@ export default function Home() {
                             type="button"
                             onClick={() => navigate("/research/active-projects")}
                             data-ocid="home.primary_button"
+                            className="hover:bg-transparent hover:border-2 hover:border-(--navy) hover:text-(--navy) bg-(--orange) text-white border-0 px-5 py-4"
                             style={{
-                                background: "var(--orange)",
-                                color: "#fff",
-                                border: "none",
-                                padding: "14px 32px",
+                                // background: "var(--orange)",
+                                // color: "#fff",
+                                // border: "none",
+                                // padding: "14px 32px",
                                 fontFamily: "'Barlow Condensed', sans-serif",
                                 fontWeight: 700,
                                 fontSize: 15,
@@ -678,7 +641,7 @@ export default function Home() {
                                 borderRadius: 2,
                             }}
                         >
-                            SEE ALL 12 PROJECTS →
+                            SEE ALL PROJECTS →
                         </button>
                     </AnimatedSection>
                 </div>
@@ -700,11 +663,11 @@ export default function Home() {
                             type="button"
                             onClick={() => navigate("/people/governance")}
                             data-ocid="home.primary_button"
+                            className="text-(--orange) border-2 border-(--orange) hover:border-(--navy) hover:text-(--navy)"
                             style={{
                                 marginTop: 16,
                                 background: "transparent",
-                                border: "2px solid var(--orange)",
-                                color: "var(--orange)",
+                                // border: "2px solid var(--orange)",
                                 padding: "12px 24px",
                                 fontFamily: "'Barlow Condensed', sans-serif",
                                 fontWeight: 700,
@@ -725,12 +688,14 @@ export default function Home() {
                                 name: "Stephen Parks",
                                 role: "Founder & Director",
                                 initials: "SP",
+                                image: steve,
                             },
-                            { name: "Srdja Popovic", role: "Co-Founder", initials: "SR" },
+                            { name: "Srdja Popovic", role: "Co-Founder", initials: "SR", image: Srdja },
                             {
                                 name: "Felix Maradiaga",
                                 role: "Advocate & Faculty",
                                 initials: "FM",
+                                image: null,
                             },
                         ].map((person, i) => (
                             <motion.div
@@ -761,9 +726,14 @@ export default function Home() {
                                         fontSize: 18,
                                         color: "var(--orange)",
                                         flexShrink: 0,
+                                        overflow: "hidden",
                                     }}
                                 >
-                                    {person.initials}
+                                    {person.image ? (
+                                        <img src={person.image} alt={person.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                    ) : (
+                                        person.initials
+                                    )}
                                 </div>
                                 <div>
                                     <div className="t-name" style={{ color: "var(--navy)" }}>
@@ -813,7 +783,8 @@ export default function Home() {
                             title: "Community Publications",
                             desc: '"Four volumes of scholarship, advocacy, and lived testimony."',
                             cta: "EXPLORE PUBLICATIONS →",
-                            action: "/publications"
+                            action: "/publications",
+                            buttonClass: "text-white border-white group-hover:text-(--orange) group-hover:border-(--orange)",
                         },
                         {
                             bg: "var(--cream)",
@@ -823,6 +794,7 @@ export default function Home() {
                             desc: "A Journal of Dialogue, Research, and Advocacy",
                             cta: "READ JOURNAL →",
                             action: "/publications",
+                            buttonClass: "text-(--orange) border-(--orange) group-hover:text-(--navy) group-hover:border-(--navy)",
                         },
                         {
                             bg: "var(--orange)",
@@ -832,10 +804,12 @@ export default function Home() {
                             desc: "Conversations with democratic advocates, researchers, and movement leaders from around the world.",
                             cta: "LISTEN NOW →",
                             action: "/publications",
+                            buttonClass: "text-white border-white group-hover:text-(--navy) group-hover:border-(--navy)",
                         },
                     ].map((panel) => (
                         <motion.div
                             key={panel.title}
+                            className="group"
                             whileHover={{ scale: 1.02 }}
                             transition={{ duration: 0.2 }}
                             style={{
@@ -890,7 +864,7 @@ export default function Home() {
                                 {panel.desc}
                             </p>
                             <span
-                                className="border px-4 py-2"
+                                className={`border px-4 py-2 transition-colors duration-300 ${panel.buttonClass}`}
                                 style={{
                                     alignSelf: "flex-start",
                                     fontFamily: "'Barlow Condensed', sans-serif",
@@ -898,14 +872,6 @@ export default function Home() {
                                     fontSize: 14,
                                     letterSpacing: "2px",
                                     textTransform: "uppercase",
-                                    color:
-                                        panel.bg === "var(--cream)"
-                                            ? "var(--orange)"
-                                            : "#fff",
-                                    borderColor:
-                                        panel.bg === "var(--cream)"
-                                            ? "var(--orange)"
-                                            : "#fff",
                                 }}
                             >
                                 {panel.cta}

@@ -74,19 +74,26 @@ export default function About() {
                         ABOUT THE DEMOCRATIC FUTURES PROJECT
                     </div>
                     <OrangeTicker />
-                    <motion.h1
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
+                    <h1
                         className="t-section text-white mb-6"
                         style={{ fontSize: "clamp(48px,7vw,110px)" }}
                     >
-                        UNIVERSITIES
-                        <br />
-                        MUST PARTICIPATE
-                        <br />
-                        IN DEMOCRACY'S DEFENSE.
-                    </motion.h1>
+                        {[
+                            "UNIVERSITIES",
+                            "MUST PARTICIPATE",
+                            "IN DEMOCRACY'S DEFENSE.",
+                        ].map((word, i) => (
+                            <motion.span
+                                key={word}
+                                initial={{ opacity: 0, y: 30 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.3 + i * 0.08 }}
+                                style={{ display: "block" }}
+                            >
+                                {word}
+                            </motion.span>
+                        ))}
+                    </h1>
                     <motion.p
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -273,42 +280,44 @@ export default function About() {
                         <div className="t-label mb-3">OUR VALUES</div>
                         <OrangeTicker />
                     </AnimatedSection> */}
-                    <div
-                        className="grid gap-6"
-                        style={{
-                            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                        }}
-                    >
-                        {values.map((v, i) => (
-                            <motion.div
-                                key={v.name}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: i * 0.1 }}
-                                whileHover={{
-                                    y: -8,
-                                    boxShadow: "0 20px 60px rgba(35,45,75,0.15)",
-                                }}
-                                className="bg-white border border-[rgba(35,45,75,0.08)] border-t-[8px] border-t-[var(--orange)] p-8"
-                                style={{ transition: "box-shadow 0.2s, transform 0.2s" }}
-                            >
-                                <div className="t-label  mb-3">{v.tag}</div>
-                                <h3
-                                    className="font-black  text-[var(--navy)] uppercase mb-4 text-3xl"
-                                    style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                    <AnimatedSection>
+                        <div
+                            className="grid gap-6"
+                            style={{
+                                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                            }}
+                        >
+                            {values.map((v, i) => (
+                                <motion.div
+                                    key={v.name}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                                    whileHover={{
+                                        y: -8,
+                                        boxShadow: "0 20px 60px rgba(35,45,75,0.15)",
+                                    }}
+                                    className="bg-white border border-[rgba(35,45,75,0.08)] border-t-[8px] border-t-[var(--orange)] p-8"
+                                    style={{ transition: "box-shadow 0.2s, transform 0.2s" }}
                                 >
-                                    {v.name}
-                                </h3>
-                                <p
-                                    className="leading-[1.75] m-0 text-[var(--ink)] text-[16px]"
-                                    style={{ fontFamily: "Lora, serif" }}
-                                >
-                                    {v.sub}
-                                </p>
-                            </motion.div>
-                        ))}
-                    </div>
+                                    <div className="t-label  mb-3">{v.tag}</div>
+                                    <h3
+                                        className="font-black  text-[var(--navy)] uppercase mb-4 text-3xl"
+                                        style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                                    >
+                                        {v.name}
+                                    </h3>
+                                    <p
+                                        className="leading-[1.75] m-0 text-[var(--ink)] text-[16px]"
+                                        style={{ fontFamily: "Lora, serif" }}
+                                    >
+                                        {v.sub}
+                                    </p>
+                                </motion.div>
+                            ))}
+                        </div>
+                    </AnimatedSection>
                 </div>
             </section>
 

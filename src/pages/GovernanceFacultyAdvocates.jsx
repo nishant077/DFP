@@ -60,7 +60,7 @@ export default function GovernanceFacultyAdvocates() {
                 </div>
             </section>
 
-            <section className="bg-[var(--cream)] px-6 py-16">
+            <section className="bg-(--cream) px-6 py-16">
                 <div className="max-w-[1280px] mx-auto">
                     <div className="flex items-center justify-between flex-wrap gap-6 mb-12">
                         <div>

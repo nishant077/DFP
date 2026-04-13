@@ -16,6 +16,7 @@ function ProjectRow({ project, index }) {
             <div
                 onMouseEnter={() => setHovered(true)}
                 onMouseLeave={() => setHovered(false)}
+                className="px-4 md:px-6 rounded-md"
                 style={{
                     borderTop: "1px solid rgba(244,244,240,0.3)",
                     background: hovered ? "var(--orange-glow)" : "transparent",
@@ -71,8 +72,8 @@ function ProjectRow({ project, index }) {
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             style={{ overflow: "hidden" }}
                         >
-                            <div className="pb-6 border-l-[3px] md:border-l-4 border-(--orange) ml-2 md:ml-9 pl-4 md:pl-6 mt-2 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-                                <div className="flex-1">
+                            <div className="pb-6 ml-2 md:ml-9 mt-2 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+                                <div className="flex-1 border-l-[3px] md:border-l-4 border-(--orange) pl-4 md:pl-6">
                                     <p
                                         style={{
                                             fontFamily: "Lora, serif",

@@ -9,7 +9,7 @@ export default function Publications() {
         <div>
             {/* Hero */}
             <section
-                className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 md:py-24 text-center overflow-hidden bg-(--navy)"
+                className="relative min-h-[60vh] flex items-center justify-center px-6 py-16 md:py-20 text-center overflow-hidden bg-(--navy)"
                 data-ocid="publications.section"
             >
                 <img
@@ -112,7 +112,7 @@ export default function Publications() {
                                     href={book.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[var(--orange)] font-bold uppercase no-underline tracking-[2px] text-[13px]"
+                                    className="text-[var(--orange)] hover:text-(--navy) font-bold uppercase no-underline tracking-[2px] text-[13px]"
                                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                                     data-ocid="publications.link"
                                 >
@@ -231,7 +231,7 @@ export default function Publications() {
             <section className="flex flex-col md:flex-row min-h-[480px]">
                 {/* Left */}
                 <div
-                    className="noise-overlay bg-[var(--navy)] px-6 py-16 flex flex-col justify-center w-full md:w-3/5"
+                    className="noise-overlay bg-[var(--navy)] px-16 py-16 flex flex-col justify-center w-full md:w-3/5"
                 >
                     <div className="t-label mb-3">PODCAST</div>
                     <OrangeTicker />
