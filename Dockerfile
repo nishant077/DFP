@@ -14,5 +14,5 @@ COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/public ./public
 RUN npm install --production
 
-EXPOSE 4173
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4173"]
+EXPOSE 4090
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4090"]
