@@ -9,7 +9,7 @@ const Home = lazy(() => import("./pages/Home"));
 const About = lazy(() => import("./pages/About"));
 const GovernanceFacultyAdvocates = lazy(() => import("./pages/GovernanceFacultyAdvocates"));
 const Fellows = lazy(() => import("./pages/Fellows"));
-const Partners = lazy(() => import("./pages/Partners"));
+// const Partners = lazy(() => import("./pages/Partners"));
 const ActiveProjects = lazy(() => import("./pages/ActiveProjects"));
 const PastProjects = lazy(() => import("./pages/PastProjects"));
 const Publications = lazy(() => import("./pages/Publications"));
@@ -54,8 +54,8 @@ function renderPage(path) {
       return <GovernanceFacultyAdvocates />;
     case "/people/fellows":
       return <Fellows />;
-    case "/people/partners":
-      return <Partners />;
+    // case "/people/partners":
+    //   return <Partners />;
     case "/research/active-projects":
       return <ActiveProjects />;
     case "/research/past-projects":

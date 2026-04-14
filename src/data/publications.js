@@ -1,4 +1,7 @@
-
+import DreamsNightmares from '../assets/pubicationBookImages/DreamsNightmares.png';
+import EqualityJustice from '../assets/pubicationBookImages/EqualityJustice.png';
+import FacesCourage from '../assets/pubicationBookImages/FacesCourage.png';
+import PeopleDemandDemocracy from '../assets/pubicationBookImages/PeopleDemandDemocracy.png';
 
 export const books = [
     {
@@ -8,6 +11,7 @@ export const books = [
         publisher: "Parlor Press",
         note: "English and Spanish",
         url: "https://parlorpress.com/products/dreams-and-nightmares",
+        image: DreamsNightmares,
     },
     {
         id: 2,
@@ -15,6 +19,7 @@ export const books = [
         publisher: "Parlor Press",
         note: "",
         url: "https://parlorpress.com/products/equality-and-justice-an-engaged-generation-a-troubled-world",
+        image: EqualityJustice,
     },
     {
         id: 3,
@@ -22,6 +27,7 @@ export const books = [
         publisher: "Parlor Press",
         note: "",
         url: "https://parlorpress.com/products/faces-of-courage",
+        image: FacesCourage,
     },
     {
         id: 4,
@@ -29,5 +35,6 @@ export const books = [
         publisher: "Parlor Press",
         note: "",
         url: "https://parlorpress.com/products/the-people-demand-democracy",
+        image: PeopleDemandDemocracy,
     },
 ];

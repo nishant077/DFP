@@ -10,7 +10,6 @@ const navLinks = [
         dropdown: [
             { label: "Governance and Faculty & Allies", path: "/people/governance&faculty-allies" },
             { label: "Fellows", path: "/people/fellows" },
-            { label: "Partners", path: "/people/partners" },
         ],
     },
     {
@@ -130,13 +129,13 @@ export default function Navbar() {
                                 {"dropdown" in link ? (
                                     <button
                                         type="button"
-                                        className="dfp-nav-link"
+                                        className="dfp-nav-link text-white hover:text-(--orange) transition-colors"
                                         style={{
                                             fontFamily: "'Barlow Condensed', sans-serif",
                                             fontWeight: 700,
                                             fontSize: 13,
                                             letterSpacing: "2px",
-                                            color: "#fff",
+                                            // color: "#fff",
                                             textTransform: "uppercase",
                                             background: "none",
                                             border: "none",
@@ -155,19 +154,20 @@ export default function Navbar() {
                                     <button
                                         type="button"
                                         onClick={() => handleNavigate(link.path)}
-                                        className="dfp-nav-link"
+                                        className="dfp-nav-link text-white hover:text-(--orange) transition-colors"
                                         style={{
                                             fontFamily: "'Barlow Condensed', sans-serif",
                                             fontWeight: 700,
                                             fontSize: 13,
                                             letterSpacing: "2px",
-                                            color: "#fff",
+                                            // color: "#fff",
                                             textTransform: "uppercase",
                                             background: "none",
                                             border: "none",
                                             cursor: "pointer",
                                             padding: "4px 0",
                                         }}
+                                      
                                         data-ocid="nav.link"
                                     >
                                         {link.label}
@@ -211,15 +211,17 @@ export default function Navbar() {
                                                             fontWeight: 700,
                                                             fontSize: 13,
                                                             letterSpacing: "2px",
-                                                            color: "#fff",
+                                                            // color: "#fff",
                                                             textTransform: "uppercase",
                                                             background: "none",
                                                             border: "none",
                                                             cursor: "pointer",
                                                         }}
+                                                        className="text-white hover:text-(--orange) transition-colors"
                                                         data-ocid="nav.link"
                                                     >
                                                         {item.label}
+                                                      
                                                     </motion.button>
                                                 ))}
                                             </motion.div>

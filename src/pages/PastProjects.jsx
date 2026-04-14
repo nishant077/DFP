@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { pastProjects } from "../data/pastprojects";
+import { pastProjects } from "../data/pastProjects";
 
 export default function PastProjects() {
     return (

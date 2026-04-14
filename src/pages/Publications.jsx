@@ -74,8 +74,8 @@ export default function Publications() {
                                 data-ocid={`publications.item.${i + 1}`}
                             >
                                 {/* Book cover */}
-                                <div className="bg-[var(--navy)] aspect-[3/4] flex flex-col items-center justify-center p-6 mb-4 border-b-4 border-[var(--orange)]">
-                                    <div
+                                <div className="bg-(--navy) aspect-[3/4] flex flex-col mb-4 border-b-4 border-(--orange)">
+                                    {/* <div
                                         className="font-black text-[var(--orange)] uppercase text-center leading-[1.2]"
                                         style={{
                                             fontFamily: "'Barlow Condensed', sans-serif",
@@ -83,8 +83,9 @@ export default function Publications() {
                                         }}
                                     >
                                         {book.title}
-                                    </div>
-                                    {book.note && (
+                                    </div> */}
+                                    <img src={book.image} alt={book.title} className="object-contain" />
+                                    {/* {book.note && (
                                         <div
                                             className="mt-4 italic text-center text-[12px]"
                                             style={{
@@ -94,7 +95,7 @@ export default function Publications() {
                                         >
                                             ({book.note})
                                         </div>
-                                    )}
+                                    )} */}
                                 </div>
                                 <p
                                     className="font-bold text-[var(--ink)] uppercase leading-[1.2] mb-1 text-[16px]"
@@ -112,7 +113,7 @@ export default function Publications() {
                                     href={book.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-[var(--orange)] hover:text-(--navy) font-bold uppercase no-underline tracking-[2px] text-[13px]"
+                                    className="text-[var(--orange)] hover:text-(--navy) transition-colors font-bold uppercase no-underline tracking-[2px] text-[13px]"
                                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                                     data-ocid="publications.link"
                                 >
@@ -151,7 +152,7 @@ export default function Publications() {
                                 <div className="flex gap-3 flex-wrap">
                                     <button
                                         type="button"
-                                        className="bg-[var(--orange)] text-white border-none px-6 py-3 font-bold uppercase cursor-pointer rounded-sm tracking-[2px] text-[14px]"
+                                        className="bg-(--orange) hover:bg-transparent hover:border-2 hover:border-(--navy) hover:text-(--navy) text-white border-0 px-6 py-3 font-bold uppercase cursor-pointer rounded-sm tracking-[2px] text-[14px]"
                                         style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                                         data-ocid="publications.primary_button"
                                         onClick={() =>
@@ -166,7 +167,7 @@ export default function Publications() {
                                         href="https://gfptransformations.org/"
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="bg-transparent text-[var(--navy)] border-2 border-[var(--navy)] px-6 py-3 font-bold uppercase no-underline rounded-sm inline-block tracking-[2px] text-[14px]"
+                                        className="bg-transparent hover:bg-(--orange) transition-colors hover:text-white hover:border-0 text-(--navy) border-2 border-(--navy) px-6 py-3 font-bold uppercase no-underline rounded-sm inline-block tracking-[2px] text-[14px]"
                                         style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                                         data-ocid="publications.secondary_button"
                                     >
@@ -257,7 +258,7 @@ export default function Publications() {
                             href="https://global.virginia.edu/power-of-many"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[var(--orange)] text-white px-7 py-3 font-bold uppercase no-underline rounded-sm tracking-[2px] text-[14px]"
+                            className="bg-(--orange) hover:bg-transparent hover:border-2 hover:border-white text-white border-0 px-7 py-3 font-bold uppercase no-underline rounded-sm tracking-[2px] text-[14px]"
                             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                             data-ocid="publications.primary_button"
                         >

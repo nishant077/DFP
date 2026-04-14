@@ -51,36 +51,43 @@ export default function Fellows() {
                         </blockquote>
                     </div>
 
-                    {/* Mini grid of initials */}
-                    <div className="relative mx-auto lg:mx-0 shrink-0 transform scale-[0.85] sm:scale-100 origin-center" style={{ width: 295, height: 325 }}>
-                        {currentFellows.slice(0, 4).map((f, i) => {
-                            const isRight = i % 2 === 1;
-                            let top = 0;
-                            let left = 0;
+                    {/* Circular grid of initials */}
+                    <div className="relative mx-auto lg:mx-0 shrink-0 transform scale-[0.85] sm:scale-100 origin-center" style={{ width: 400, height: 400 }}>
+                        {/* Decorative inner ring */}
+                        <div
+                            className="absolute top-1/2 left-1/2 rounded-full border-[1.5px] border-dashed border-(--orange) opacity-40 pointer-events-none"
+                            style={{ width: 270, height: 270, transform: "translate(-50%, -50%)" }}
+                        />
 
-                            if (i === 0) { top = 36; left = 0; }
-                            if (i === 1) { top = 0; left = 135; }
-                            if (i === 2) { top = 165; left = 0; }
-                            if (i === 3) { top = 129; left = 135; }
+                        {currentFellows.map((f, i) => {
+                            const isRight = i % 2 === 1;
+                            // Calculate angle for perfect circular orbit
+                            const angle = (i / currentFellows.length) * 2 * Math.PI - Math.PI / 2;
+                            const radius = 135;
+                            const size = 130;
+
+                            const left = 200 + radius * Math.cos(angle);
+                            const top = 200 + radius * Math.sin(angle);
 
                             return (
                                 <motion.div
                                     key={f.id}
-                                    initial={{ opacity: 0, scale: 0.8 }}
+                                    initial={{ opacity: 0, scale: 0.5 }}
                                     animate={{ opacity: 1, scale: 1 }}
-                                    transition={{ delay: 0.3 + i * 0.1, duration: 0.4 }}
-                                    className="absolute rounded-full flex items-center justify-center font-black text-[var(--orange)]"
+                                    transition={{ delay: 0.2 + i * 0.1, duration: 0.5 }}
+                                    className="absolute rounded-full flex items-center justify-center font-black text-[var(--orange)] shadow-xl"
                                     style={{
-                                        width: 160,
-                                        height: 160,
+                                        width: size,
+                                        height: size,
                                         top: top,
                                         left: left,
+                                        marginTop: -size / 2,
+                                        marginLeft: -size / 2,
                                         zIndex: 10 - i,
                                         backgroundColor: isRight ? "var(--ink)" : "var(--navy)",
-                                        fontSize: "64px",
+                                        fontSize: "44px",
                                         letterSpacing: "-1px",
                                         fontFamily: "'Barlow Condensed', sans-serif",
-                                        boxShadow: "0 8px 24px rgba(35,45,75,0.15)",
                                     }}
                                 >
                                     {f.initials}
@@ -99,7 +106,7 @@ export default function Fellows() {
                         <OrangeTicker />
                     </AnimatedSection>
                     <div
-                        className="grid gap-7 grid-cols-1 md:grid-cols-2"
+                        className="grid gap-7 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
                         data-ocid="fellows.list"
                     >
                         {fellowsAsPersons.map((person, i) => (

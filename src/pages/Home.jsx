@@ -6,9 +6,10 @@ import PullQuote from "../components/PullQuote";
 import StatCounter from "../components/StatCounter";
 import { useRouter } from "../context/router";
 import MarqueeTicker from "../components/MarqueeTicker";
-import heroimage from '../assets/dfpheroimage.png';
+import heroimage from '../assets/HeroImage.png';
 import steve from '../assets/governanceImages/steveparks.png'
 import Srdja from '../assets/governanceImages/Srdja.png'
+import Felix from '../assets/governanceImages/Felix.png'
 
 const heroWords = [
     "RESEARCH",
@@ -116,7 +117,7 @@ export default function Home() {
                             type="button"
                             onClick={() => navigate("/research/active-projects")}
                             data-ocid="home.primary_button"
-                            className="hover:bg-(--navy) hover:border hover:border-white bg-(--orange) "
+                            className="hover:bg-(--navy)/20 hover:border hover:border-white bg-(--orange) "
                             style={{
                                 color: "#fff",
                                 padding: "14px 28px",
@@ -695,7 +696,7 @@ export default function Home() {
                                 name: "Felix Maradiaga",
                                 role: "Advocate & Faculty",
                                 initials: "FM",
-                                image: null,
+                                image: Felix,
                             },
                         ].map((person, i) => (
                             <motion.div

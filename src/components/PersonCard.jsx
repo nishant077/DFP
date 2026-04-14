@@ -1,4 +1,3 @@
-import { ExternalLink, Mail } from "lucide-react";
 import { motion } from "motion/react";
 import { useState } from "react";
 
@@ -8,7 +7,6 @@ export default function PersonCard({ person }) {
     const [hovered, setHovered] = useState(false);
 
     const linkedinLink = person.links?.find((l) => l.label.toLowerCase() === "linkedin")?.url;
-    const otherLinks = person.links?.filter((l) => l.label.toLowerCase() !== "linkedin") || [];
 
     return (
         <motion.div
@@ -30,7 +28,7 @@ export default function PersonCard({ person }) {
         >
             {/* Photo area */}
             <div
-                style={{ position: "relative", aspectRatio: "4/3", overflow: "hidden" }}
+                style={{ position: "relative", aspectRatio: "1/1", overflow: "hidden" }}
             >
                 {imgError ? (
                     <div
@@ -92,7 +90,7 @@ export default function PersonCard({ person }) {
                             }}
                         >
                             {linkedinLink ? (
-                                <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }} className="hover:underline hover:text-[var(--orange)] transition-colors">
+                                <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }} className="hover:underline hover:text-(--orange) transition-colors">
                                     {person.name}
                                 </a>
                             ) : (
@@ -130,7 +128,7 @@ export default function PersonCard({ person }) {
                         }}
                     >
                         {linkedinLink ? (
-                            <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }} className="hover:underline hover:text-[var(--orange)] transition-colors">
+                            <a href={linkedinLink} target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }} className="hover:underline hover:text-(--orange) transition-colors">
                                 {person.name}
                             </a>
                         ) : (
@@ -145,7 +143,7 @@ export default function PersonCard({ person }) {
                         color: "var(--ink)",
                         lineHeight: 1.65,
                         overflow: "hidden",
-                        maxHeight: expanded ? "none" : 80,
+                        maxHeight: expanded ? "none" : 90,
                         maskImage: expanded
                             ? "none"
                             : "linear-gradient(to bottom, black 60%, transparent 100%)",
@@ -153,14 +151,13 @@ export default function PersonCard({ person }) {
                             ? "none"
                             : "linear-gradient(to bottom, black 60%, transparent 100%)",
                     }}
-                >
-                    {person.bio}
-                </div>
+                    dangerouslySetInnerHTML={{ __html: person.bio }}
+                />
                 <button
                     type="button"
                     onClick={() => setExpanded(!expanded)}
                     style={{
-                        marginTop: 8,
+                        marginTop: 12,
                         fontFamily: "'Barlow Condensed', sans-serif",
                         fontWeight: 700,
                         fontSize: 12,
@@ -175,49 +172,6 @@ export default function PersonCard({ person }) {
                 >
                     {expanded ? "SHOW LESS ↑" : "READ MORE ↓"}
                 </button>
-
-                {/* Links row */}
-                <div
-                    style={{ display: "flex", flexWrap: "wrap", gap: 12, marginTop: 12 }}
-                >
-                    {person.email && (
-                        <a
-                            href={`mailto:${person.email}`}
-                            style={{
-                                color: "var(--navy)",
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 4,
-                            }}
-                            aria-label={`Email ${person.name}`}
-                        >
-                            <Mail size={14} />
-                            <span style={{ fontFamily: "Lora, serif", fontSize: 13 }}>
-                                Email
-                            </span>
-                        </a>
-                    )}
-                    {otherLinks.map((link) => (
-                        <a
-                            key={link.url}
-                            href={link.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                                color: "var(--orange)",
-                                display: "flex",
-                                alignItems: "center",
-                                gap: 4,
-                                fontFamily: "Lora, serif",
-                                fontSize: 13,
-                                textDecoration: "underline",
-                            }}
-                        >
-                            <ExternalLink size={12} />
-                            {link.label}
-                        </a>
-                    ))}
-                </div>
             </div>
         </motion.div>
     );
