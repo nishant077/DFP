@@ -58,14 +58,6 @@ export const currentFellows = [
         ],
     },
     {
-        id: "madison-obermeyer",
-        name: "Madison Obermeyer",
-        image: "/images/people/madison-obermeyer.jpg",
-        initials: "MO",
-        bio: "Madison Obermeyer is an Echols Scholar and a double major in economics and politics. She intends to attend law school and pursue a career in rights litigation within supranational organizations. Obermeyer’s research is focused on the global interplay of power, especially between historically marginalized political groups and contingencies that perpetuate authority. She served as an intern at the Center for Applied NonViolent Actions and Strategies where she constructed a course on backsliding democracies. This work entailed a comparative case-study analysis of current regimes to determine what factors influence internal politics and how external constituencies can undermine such systems through nonviolent means.",
-        links: [],
-    },
-    {
         id: "ying-lei-pham",
         name: "Ying Lei Pham",
         image: YingLeiPham,

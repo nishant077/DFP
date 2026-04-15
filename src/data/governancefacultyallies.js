@@ -21,6 +21,16 @@ import TessaFarmer from '../assets/governanceImages/TessaFarmer.png';
 import Yevgeniya from '../assets/governanceImages/Yevgeniya.png';
 import Omid from '../assets/governanceImages/Omid.jpeg';
 
+import Colvin from '../assets/governanceImages/Colvin.webp';
+import Koslovska from '../assets/governanceImages/Koslovska.webp';
+import mtata from '../assets/governanceImages/mtata.jpg';
+import MuSochu from '../assets/governanceImages/MuSochu.jpg';
+import Phoeba from '../assets/governanceImages/Phoebe.jpg';
+import Quissell from '../assets/governanceImages/Quissell.webp'
+import NishDai from '../assets/governanceImages/NishDai.png';
+
+
+
 
 
 
@@ -70,7 +80,7 @@ export const facultyAllies = [
     {
         id: "chris-colvin",
         name: "Chris Colvin",
-        image: "/images/people/chris-colvin.jpg",
+        image: Colvin,
         initials: "CC",
         category: "faculty",
         role: "Faculty",
@@ -110,7 +120,7 @@ export const facultyAllies = [
     {
         id: "lyudmyla-kozlovska",
         name: "Lyudmyla Kozlovska",
-        image: "/images/people/lyudmyla-kozlovska.jpg",
+        image:  Koslovska,
         initials: "LK",
         category: "advocate",
         role: "Advocate",
@@ -160,7 +170,7 @@ export const facultyAllies = [
     {
         id: "kenneth-mtata",
         name: "Reverend Kenneth Mtata",
-        image: "/images/people/kenneth-mtata.jpg",
+        image: mtata,
         initials: "KM",
         category: "advocate",
         role: "Advocate",
@@ -180,7 +190,7 @@ export const facultyAllies = [
     {
         id: "kathryn-quissell",
         name: "Kathryn Quissell",
-        image: "/images/people/kathryn-quissell.jpg",
+        image: Quissell,
         initials: "KQ",
         category: "faculty",
         role: "Faculty",
@@ -220,7 +230,7 @@ export const facultyAllies = [
     {
         id: "mu-sochua",
         name: "Mu Sochua",
-        image: "/images/people/mu-sochua.jpg",
+        image: MuSochu,
         initials: "MS",
         category: "advocate",
         role: "Advocate",
@@ -270,7 +280,7 @@ export const facultyAllies = [
     {
         id: "phoebe-crisman",
         name: "Phoebe Crisman",
-        image: "/images/people/phoebe-crisman.jpg",
+        image: Phoeba,
         initials: "PC",
         category: "faculty",
         role: "Faculty",
@@ -286,6 +296,16 @@ export const facultyAllies = [
         role: "Faculty",
         affiliation: "University of Virginia",
         bio: `Omid Tofighian is an award-winning educator, researcher and community advocate, combining philosophy with interests in citizen media, translation, popular culture, borders, displacement and discrimination. He is known for his collective and creative transnational work with refugees targeted by the border-industrial complex (including Persian-English translation and co-authoring) – particularly in the context of what he calls Australia’s carceral-border archipelago. His activism has been recognised internationally for its critical, creative, innovative, and collaborative nature. Important examples of his scholarship include translator and collaborator in Behrouz Boochani’s multi-award-winning book No Friend but the Mountains: Writing from Manus Prison (2018); co-translator/co-editor of Freedom, Only Freedom: The Prison Writings of Behrouz Boochani (2023) co-editor of Writing Through Fences: Archipelago of Letters (2021) and author of Creating New Languages of Resistance: Translation, Public Philosophy and Border Violence (2025).`,
+    },
+     {
+        id: "nishchhal-kharal",
+        name: "Nishchhal Kharal",
+        image: NishDai,
+        initials: "NK",
+        category: "faculty",
+        role: "Faculty",
+        affiliation: "University of Virginia",
+        bio: `Nishchhal Kharal (Nish) is an artivist and social entrepreneur from Nepal and the co-founder and CEO of Freedom Studio, a civil media organization that collaborates with social movements to provide strategic, creative, and technical support in building collective power. His work sits at the intersection of creative communication, locally-led peacebuilding, and civil society development, with a particular focus on harnessing new media and art as tools for healing oppression and advancing democratic participation. Nish is pursuing a Master in International Development Policy at Duke University's Sanford School of Public Policy, where he is engaged in reimagining development frameworks that shift power to grassroots communities. He has engaged with the Democratic Futures Project through the DFP Forum, the ENWR Course Project, and the IHGC Forum, contributing perspectives from the Global South on how art, civil media, and community-rooted practice can reinvigorate democratic life.`,
     },
 ];
 

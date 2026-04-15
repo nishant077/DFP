@@ -3,7 +3,7 @@ import AnimatedSection from "../components/AnimatedSection";
 import OrangeTicker from "../components/OrangeTicker";
 import PullQuote from "../components/PullQuote";
 import aboutimage from '../assets/aboutpage.jpeg';
-import aboutimg2 from '../assets/dfpheroimage.png';
+import aboutimg2 from '../assets/About.png';
 
 const intentions = [
     {
@@ -200,7 +200,7 @@ export default function About() {
                                 "Train students as democratic thinkers and practitioner.",
                                 "Publish and platform voices from movements.",
                                 "Build transnational networks of solidarity.",
-                                "We believe universities go beyond studying democracy, they must participate in its defense."
+                                "Go beyond studying democracy to participate in its defense."
                             ].map((stmt) => (
                                 <div key={stmt} className="flex gap-4 items-start">
                                     <span
@@ -331,12 +331,22 @@ export default function About() {
                             href="https://cgii.virginia.edu/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="font-bold text-[var(--navy)] no-underline border-b-2 border-[var(--orange)] pb-1 text-[28px]"
+                            className="font-bold text-[var(--navy)] no-underline border-b-2 border-[var(--orange)] hover:text-(--orange) pb-1 text-[28px]"
                             style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                         >
                             Center for Global Inquiry and Innovation
                         </a>
+                        
                     </div>
+                     <a
+                            href="https://jeffersontrust.org/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="font-bold text-(--navy) no-underline border-b-2 border-(--orange) hover:text-(--orange) pb-1 text-[28px]"
+                            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                        >
+                           Jefferson Trust
+                        </a>
                     <p
                         className="text-[var(--fog)] mt-4 text-[14px]"
                         style={{ fontFamily: "Lora, serif" }}

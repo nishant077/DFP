@@ -2,7 +2,7 @@ import Burmese from '../assets/activeProjectImages/Burmese.png'
 import CivilSociety from '../assets/activeProjectImages/CivilSociety.png'
 import CounterAutocracy from '../assets/activeProjectImages/CounterAutocracy.png'
 import CryptoCurrency from '../assets/activeProjectImages/CryptoCurrency.png'
-import Diakonia from '../assets/activeProjectImages/Diakonia.png'
+// import Diakonia from '../assets/activeProjectImages/Diakonia.png'
 import EndArbitrary from '../assets/activeProjectImages/EndArbitrary.png'
 import Gene from '../assets/activeProjectImages/Gene.png'
 import Khmer from '../assets/activeProjectImages/Khmer.png'
@@ -55,19 +55,19 @@ export const activeProjects = [
         tags: ["2025", "World Liberty Congress", "Felix Maradiaga"],
         image: CounterAutocracy,
     },
+    // {
+    //     id: 5,
+    //     number: "05",
+    //     name: "The Diakonia Project, World Council of Churches",
+    //     year: "2025",
+    //     description:
+    //         "Initiated in 2025, with Rev. Kenneth Mtata, World Council of Churches (WCC) Director Public Witness and Diakonia, DFP has supported a transnational project in Southern Africa drawing together Christian theology and nonviolent social movement theory. The impetus for the WCC partnership developed from WCC leadership engagement with DFP for The Nehemiah Project curriculum, first created by Pastor Evan Mawarire/#ThisFlag. This curriculum focused on training young ministers in authoritarian nations on how to bring such strategies to their congregations. At an initial meeting in South Africa in 2025, DFP sponsored a training session for over 60 ministers, who then integrated these strategies into their congregations. In 2026, WLC/DFP will expand the number of ministers as well as the nations represented, who received receive the training, in a proposed meeting in Cape Town, South Africa.",
+    //     tags: ["2025", "Southern Africa", "Rev. Kenneth Mtata"],
+    //     image: Diakonia,
+    // },
     {
         id: 5,
         number: "05",
-        name: "The Diakonia Project, World Council of Churches",
-        year: "2025",
-        description:
-            "Initiated in 2025, with Rev. Kenneth Mtata, World Council of Churches (WCC) Director Public Witness and Diakonia, DFP has supported a transnational project in Southern Africa drawing together Christian theology and nonviolent social movement theory. The impetus for the WCC partnership developed from WCC leadership engagement with DFP for The Nehemiah Project curriculum, first created by Pastor Evan Mawarire/#ThisFlag. This curriculum focused on training young ministers in authoritarian nations on how to bring such strategies to their congregations. At an initial meeting in South Africa in 2025, DFP sponsored a training session for over 60 ministers, who then integrated these strategies into their congregations. In 2026, WLC/DFP will expand the number of ministers as well as the nations represented, who received receive the training, in a proposed meeting in Cape Town, South Africa.",
-        tags: ["2025", "Southern Africa", "Rev. Kenneth Mtata"],
-        image: Diakonia,
-    },
-    {
-        id: 6,
-        number: "06",
         name: "End Arbitrary Detention Campaign",
         year: "2024",
         description:
@@ -83,8 +83,8 @@ export const activeProjects = [
         image: EndArbitrary,
     },
     {
-        id: 7,
-        number: "07",
+        id: 6,
+        number: "06",
         name: "GENE: An AI Nonviolent Social Movement Training Tool",
         year: "2023",
         description:
@@ -94,8 +94,8 @@ export const activeProjects = [
         image: Gene,
     },
     {
-        id: 8,
-        number: "08",
+        id: 7,
+        number: "07",
         name: "Khmer Movement for Democracy",
         year: "2025",
         description:
@@ -107,8 +107,8 @@ export const activeProjects = [
         image: Khmer,
     },
     {
-        id: 9,
-        number: "09",
+        id: 8,
+        number: "08",
         name: "Nehemiah Project",
         year: "2023",
         description:
@@ -117,8 +117,8 @@ export const activeProjects = [
         image: Nehemiah,
     },
     {
-        id: 10,
-        number: "10",
+        id: 9,
+        number: "09",
         name: "Ríos de Pie",
         year: "2022",
         description:
@@ -127,8 +127,8 @@ export const activeProjects = [
         image: RiosdePiedras,
     },
     {
-        id: 11,
-        number: "11",
+        id: 10,
+        number: "10",
         name: "Opposition Leadership Workshop",
         year: "2024",
         description:
@@ -137,8 +137,8 @@ export const activeProjects = [
         image: Opposition,
     },
     {
-        id: 12,
-        number: "12",
+        id: 11,
+        number: "11",
         name: "Syrians for Truth & Justice",
         year: "2021",
         description:
@@ -154,8 +154,8 @@ export const activeProjects = [
         image: Syrians,
     },
     {
-        id: 13,
-        number: "13",
+        id: 12,
+        number: "12",
         name: "Freedom Studio",
         year: "2025",
         description:

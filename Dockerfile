@@ -12,7 +12,8 @@ WORKDIR /app
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/dist ./dist
 COPY --from=builder /app/public ./public
-RUN npm install --production
+COPY --from=builder /app/vite.config.js ./
+RUN npm install          
 
-EXPOSE 4090
-CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4090"]
+EXPOSE 4091
+CMD ["npm", "run", "preview", "--", "--host", "0.0.0.0", "--port", "4091"]

@@ -194,6 +194,23 @@ export default function Footer() {
                             >
                                 Center for Global Inquiry and Innovation
                             </a>
+                            <a
+                                href="https://jeffersontrust.org/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{
+                                    color: "rgba(255,255,255,0.75)",
+                                    fontFamily: "'Barlow Condensed', sans-serif",
+                                    fontWeight: 700,
+                                    fontSize: 16,
+                                    textDecoration: "none",
+                                    borderBottom: "1px solid var(--orange)",
+                                    display: "inline-block",
+                                    paddingBottom: 2,
+                                }}
+                            >
+                               Jefferson Trust
+                            </a>
                         </div>
                     </div>
                 </div>

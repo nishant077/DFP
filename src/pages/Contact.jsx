@@ -4,7 +4,7 @@ import { useState } from "react";
 import AnimatedSection from "../components/AnimatedSection";
 import PullQuote from "../components/PullQuote";
 import OrangeTicker from "../components/OrangeTicker";
-import contactimage from '../assets/contact.jpeg';
+import contactimage from '../assets/Contact.png';
 
 export default function Contact() {
     const [form, setForm] = useState({
@@ -14,10 +14,50 @@ export default function Contact() {
         message: "",
     });
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setSubmitted(true);
+
+        if (isSubmitting) return;
+        setIsSubmitting(true);
+
+        const { name, email, subject, message } = form;
+
+        let subjectText = "Democratic Futures Project Contact";
+        if (subject === "general") subjectText = "General Inquiry";
+        if (subject === "research") subjectText = "Research Partnership";
+        if (subject === "media") subjectText = "Media";
+        if (subject === "fellowship") subjectText = "Fellowship";
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "61482964-0b73-401d-92d0-a104ccf9f74b",
+                    name,
+                    email,
+                    subject: subjectText,
+                    message,
+                }),
+            });
+            const result = await response.json();
+            if (result.success) {
+                setSubmitted(true);
+            } else {
+                console.error("Form submission failed:", result);
+                alert("Failed to send message. Please try again later.");
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            alert("An error occurred while sending your message. Please try again.");
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     const inputClassName =
@@ -127,13 +167,17 @@ export default function Contact() {
                                     label: "Center for Global Inquiry and Innovation",
                                     url: "https://cgii.virginia.edu/",
                                 },
+                                {
+                                    label: "Jefferson Trust",
+                                    url: "https://jeffersontrust.org/",
+                                },
                             ].map((link) => (
                                 <a
                                     key={link.url}
                                     href={link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="flex items-center gap-2 text-[var(--navy)] font-bold uppercase no-underline tracking-[1px] text-[15px]"
+                                    className="flex items-center gap-2 text-(--navy) hover:text-(--orange) font-bold uppercase no-underline tracking-[1px] text-[15px]"
                                     style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
                                 >
                                     <ExternalLink size={12} className="text-[var(--orange)]" />

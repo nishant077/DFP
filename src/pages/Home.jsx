@@ -6,7 +6,7 @@ import PullQuote from "../components/PullQuote";
 import StatCounter from "../components/StatCounter";
 import { useRouter } from "../context/router";
 import MarqueeTicker from "../components/MarqueeTicker";
-import heroimage from '../assets/HeroImage.png';
+import heroimage from '../assets/Hero.png';
 import steve from '../assets/governanceImages/steveparks.png'
 import Srdja from '../assets/governanceImages/Srdja.png'
 import Felix from '../assets/governanceImages/Felix.png'
