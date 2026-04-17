@@ -56,7 +56,7 @@ function renderPage(path) {
       return <Fellows />;
     // case "/people/partners":
     //   return <Partners />;
-    case "/research/active-projects":
+    case "/research/current-projects":
       return <ActiveProjects />;
     case "/research/past-projects":
       return <PastProjects />;

@@ -4,6 +4,7 @@ import OrangeTicker from "../components/OrangeTicker";
 import PullQuote from "../components/PullQuote";
 import aboutimage from '../assets/aboutpage.jpeg';
 import aboutimg2 from '../assets/About.png';
+import GallerySection from "../components/GallerySection";
 
 const intentions = [
     {
@@ -174,6 +175,7 @@ export default function About() {
                     </AnimatedSection>
                 </div>
             </section>
+            <GallerySection />
 
             {/* Unique Approach */}
             <section
@@ -336,17 +338,17 @@ export default function About() {
                         >
                             Center for Global Inquiry and Innovation
                         </a>
-                        
+
                     </div>
-                     <a
-                            href="https://jeffersontrust.org/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="font-bold text-(--navy) no-underline border-b-2 border-(--orange) hover:text-(--orange) pb-1 text-[28px]"
-                            style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
-                        >
-                           Jefferson Trust
-                        </a>
+                    <a
+                        href="https://jeffersontrust.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-bold text-(--navy) no-underline border-b-2 border-(--orange) hover:text-(--orange) pb-1 text-[28px]"
+                        style={{ fontFamily: "'Barlow Condensed', sans-serif" }}
+                    >
+                        Jefferson Trust
+                    </a>
                     <p
                         className="text-[var(--fog)] mt-4 text-[14px]"
                         style={{ fontFamily: "Lora, serif" }}

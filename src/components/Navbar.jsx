@@ -2,6 +2,7 @@ import { ChevronDown, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "../context/router";
+import dfplogo from '../assets/DFPlogo.png'
 
 const navLinks = [
     { label: "ABOUT", path: "/about" },
@@ -15,8 +16,9 @@ const navLinks = [
     {
         label: "RESEARCH",
         dropdown: [
-            { label: "Active Projects", path: "/research/active-projects" },
+            { label: "Current Projects", path: "/research/current-projects" },
             { label: "Past Projects", path: "/research/past-projects" },
+            { label: "The Advocate Ally Project", path: "https://www.theadvocateallyproject.org/" },
         ],
     },
     { label: "PUBLICATIONS", path: "/publications" },
@@ -36,7 +38,11 @@ export default function Navbar() {
     }, []);
 
     const handleNavigate = (p) => {
-        navigate(p);
+        if (p.startsWith("http")) {
+            window.open(p, "_blank", "noopener,noreferrer");
+        } else {
+            navigate(p);
+        }
         setMobileOpen(false);
         setOpenDropdown(null);
     };
@@ -82,30 +88,15 @@ export default function Navbar() {
                         }}
                         data-ocid="nav.link"
                     >
-                        <span
+                        <img
+                            src={dfplogo}
+                            alt="Democratic Futures Project"
                             style={{
-                                fontFamily: "'Barlow Condensed', sans-serif",
-                                fontWeight: 900,
-                                fontSize: 22,
-                                color: "#fff",
-                                lineHeight: 1.1,
-                                textTransform: "uppercase",
+                                height: 44,
+                                width: "auto",
+                                objectFit: "contain",
                             }}
-                        >
-                            DEMOCRATIC
-                        </span>
-                        <span
-                            style={{
-                                fontFamily: "'Barlow Condensed', sans-serif",
-                                fontWeight: 900,
-                                fontSize: 16,
-                                color: "var(--orange)",
-                                lineHeight: 1,
-                                textTransform: "uppercase",
-                            }}
-                        >
-                            FUTURES PROJECT
-                        </span>
+                        />
                     </button>
 
                     {/* Desktop nav */}
@@ -167,7 +158,7 @@ export default function Navbar() {
                                             cursor: "pointer",
                                             padding: "4px 0",
                                         }}
-                                      
+
                                         data-ocid="nav.link"
                                     >
                                         {link.label}
@@ -221,7 +212,7 @@ export default function Navbar() {
                                                         data-ocid="nav.link"
                                                     >
                                                         {item.label}
-                                                      
+
                                                     </motion.button>
                                                 ))}
                                             </motion.div>

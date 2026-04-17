@@ -8,7 +8,7 @@ export default defineConfig({
     tailwindcss()
   ],
 
-  assetsInclude: ['**/*.png', '**/*.PNG', '**/*.JPG'],
+  assetsInclude: ['**/*.png', '**/*.PNG', '**/*.JPG', '**/*.HEIC', '**/*.heic'],
 
   server: {
     host: '0.0.0.0',

@@ -1,5 +1,6 @@
 import { Mail } from "lucide-react";
 import { useRouter } from "../context/router";
+import dfplogo from '../assets/DFPlogo.png';
 
 export default function Footer() {
     const { navigate } = useRouter();
@@ -76,20 +77,15 @@ export default function Footer() {
                             }}
                             data-ocid="nav.link"
                         >
-                            <div
+                            <img
+                                src={dfplogo}
+                                alt="Democratic Futures Project"
                                 style={{
-                                    fontFamily: "'Barlow Condensed', sans-serif",
-                                    fontWeight: 900,
-                                    fontSize: 24,
-                                    color: "#fff",
-                                    textTransform: "uppercase",
-                                    lineHeight: 1.1,
+                                    height: 48,
+                                    width: "auto",
+                                    objectFit: "contain",
                                 }}
-                            >
-                                DEMOCRATIC
-                                <br />
-                                <span style={{ color: "var(--orange)" }}>FUTURES PROJECT</span>
-                            </div>
+                            />
                         </button>
                         <p
                             style={{
@@ -209,7 +205,7 @@ export default function Footer() {
                                     paddingBottom: 2,
                                 }}
                             >
-                               Jefferson Trust
+                                Jefferson Trust
                             </a>
                         </div>
                     </div>

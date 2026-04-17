@@ -1,5 +1,7 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useEffect, useState } from "react";
+import dfplogo from '../assets/DFPlogo.png'
+
 
 export default function Preloader({ onComplete }) {
     const [count, setCount] = useState(0);
@@ -67,23 +69,19 @@ export default function Preloader({ onComplete }) {
                         >
                             Welcome to
                         </motion.div>
-                        <motion.h1
+                        <motion.img
+                            src={dfplogo}
+                            alt="Democratic Futures Project"
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.7, delay: 0.2 }}
                             style={{
-                                fontFamily: "'Barlow Condensed', sans-serif",
-                                fontWeight: 900,
-                                fontSize: "clamp(36px, 8vw, 80px)",
-                                color: "#fff",
-                                textTransform: "uppercase",
-                                lineHeight: 1.05,
-                                letterSpacing: "-1px",
+                                width: "clamp(200px, 50vw, 500px)",
+                                height: "auto",
+                                objectFit: "contain",
                                 margin: 0,
                             }}
-                        >
-                            Democratic<br />Futures Project
-                        </motion.h1>
+                        />
 
                         {/* Animated orange line */}
                         <motion.div
