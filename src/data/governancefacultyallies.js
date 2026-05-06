@@ -124,8 +124,8 @@ export const facultyAllies = [
         initials: "LK",
         category: "advocate",
         role: "Advocate",
-        affiliation: "Open Dialogue Forum",
-        bio: `Lyudmyla Kozlovska is President of the Open Dialogue Forum. Her work focuses on the need for financial regulators to actively address the financial exclusion and transnational financial repression of democratic advocates internationally. To this end, Kozlovska has testified in the United States Congress as well as the European Union for legislation which addresses not only financial repression but the important role of Bitcoin in supporting democratic advocacy in authoritarian states. She has also been a leader in the campaign to prevent the abuse of anti-money laundering and countering the financing of terrorism (AML/CFT) laws by malign state actors.`,
+        affiliation: "Open Dialogue Foundation",
+        bio: `Lyudmyla Kozlovska is President of the Open Dialogue Foundation. Her work focuses on the need for financial regulators to actively address the financial exclusion and transnational financial repression of democratic advocates internationally. To this end, Kozlovska has testified in the United States Congress as well as the European Union for legislation which addresses not only financial repression but the important role of Bitcoin in supporting democratic advocacy in authoritarian states. She has also been a leader in the campaign to prevent the abuse of anti-money laundering and countering the financing of terrorism (AML/CFT) laws by malign state actors.`,
     },
     {
         id: "felix-maradiaga",
